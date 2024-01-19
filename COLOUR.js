@@ -1,4 +1,6 @@
-// https://developers.google.com/apps-script/reference/spreadsheet/range?hl=ru#setbackgroundscolor
+
+// calculate the amount by cell color in range (flat and multi-dimensional)
+// use on sheet as =COLOUR("A1:C10") with quotes! 
 function COLOUR(input) {
   const ss = SpreadsheetApp.getActive();
   const sh = ss.getActiveSheet();
@@ -14,7 +16,8 @@ function COLOUR(input) {
     '#00ff00': 'Не срочно', 
     '#ffd966': 'Не срочно и не важно'
     };
-  
+
+  // TODO:  https://developers.google.com/apps-script/reference/spreadsheet/range?hl=ru#setbackgroundscolor
   let add_color = function (color, value) {
     value = value || 0;
     let color_name = color_names[color] || color;
